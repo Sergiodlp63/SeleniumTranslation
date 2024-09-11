@@ -11,12 +11,12 @@ namespace SeleniumTranslation.Phase2
         private TestResultsHandler ThisTest;
         private HTML_ActionControls MyTest;
         private IWebDriver driver;
+        
         public HomePage(IWebDriver webDriver, TestResultsHandler UseThisTest, HTML_ActionControls UseMyTest)
         {
             this.driver = webDriver;
             this.ThisTest = UseThisTest;
             this.MyTest = UseMyTest;
-
 
         } //end of constructor
     

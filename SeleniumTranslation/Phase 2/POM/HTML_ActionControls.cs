@@ -14,7 +14,8 @@ namespace SeleniumTranslation.Phase2
         {
             driver = webDriver;
             MyTest = resultsHandler;
-        }
+
+        } //end of constructor
 
         public bool ClickSearchBar(By by)
         {

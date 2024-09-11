@@ -2,6 +2,10 @@
 
 namespace SeleniumTests.Phase2
 {
+    /// <summary>
+    /// This class is the parent function of phase 2. 'TestResultsHandler' handles and logs all of the HTML Actions that are implemented into 
+    /// business use cases in the POM classes. 
+    /// </summary>
     public class TestResultsHandler
     {
         // Private fields for keeping track of results and errors

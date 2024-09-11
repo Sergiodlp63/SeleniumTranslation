@@ -18,7 +18,6 @@ namespace SeleniumTranslation.Phase1
             // Initialize the ChromeDriver
             Mydriver = new ChromeDriver();
 
-
         }
 
 
@@ -43,14 +42,7 @@ namespace SeleniumTranslation.Phase1
                 TestContext.WriteLine(Convert.ToString(MyE2ETest.MySuccessCount) + "successful testable actions!");
             }
 
-            
-        }
 
-
-        [TearDown]
-        public void TearDown()
-        { 
-        
         }
 
         public TestContext TestContext
@@ -63,6 +55,13 @@ namespace SeleniumTranslation.Phase1
             { 
                 TestContext = value;
             }
+        }
+
+
+        [TearDown]
+        public void TearDown()
+        {
+           Mydriver.Close();
         }
 
     } //end of class
