@@ -1,0 +1,51 @@
+﻿using OpenQA.Selenium;
+using SeleniumTests.Phase2;
+
+namespace SeleniumTranslation.Phase2
+{
+
+    public class HTML_ActionControls 
+    {
+        private IWebDriver driver;
+        TestResultsHandler MyTest;
+
+        // Constructor
+        public HTML_ActionControls(IWebDriver webDriver, TestResultsHandler resultsHandler)
+        {
+            driver = webDriver;
+            MyTest = resultsHandler;
+        }
+
+        public bool ClickSearchBar(By by)
+        {
+           
+            try
+            {
+                driver.FindElement(by).Click();
+            }
+            catch (Exception ex)
+            {
+                MyTest.RecordFailure($"HTML ACTION: Automated end user failed to click on the search bar: {ex.Message}"); 
+                return false; 
+            }
+            MyTest.RecordSuccess();
+            return true; 
+        }
+
+        public bool SendKeysToField(By by, string text)
+        {
+            try
+            {
+                driver.FindElement(by).SendKeys(text);
+            }
+            catch (Exception ex)
+            {
+                MyTest.RecordFailure($"HTML ACTION: Automated end user failed to send keys to the field: {ex.Message}"); 
+                return false; 
+            }
+            MyTest.RecordSuccess();
+            return true;
+        }
+    }
+
+} //end of namespace
