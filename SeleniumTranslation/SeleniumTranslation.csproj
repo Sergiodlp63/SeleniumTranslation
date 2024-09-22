@@ -14,8 +14,4 @@
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="128.0.6613.11900" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Phase 3\" />
-  </ItemGroup>
-
 </Project>
