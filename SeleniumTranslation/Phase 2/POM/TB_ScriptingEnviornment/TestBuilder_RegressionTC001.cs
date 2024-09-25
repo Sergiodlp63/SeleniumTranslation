@@ -10,7 +10,7 @@ namespace SeleniumTranslation.Phase2
         private TestResultsHandler testResultsHandler;
         private HomePage homePage;
 
-        public TestBuilder_RegressionTC001(IWebDriver webDriver)
+        public TestBuilder_RegressionTC001(IWebDriver webDriver, TestResultsHandler testResultsHandler)
         {
             this.driver = webDriver;
             this.testResultsHandler = new TestResultsHandler();
