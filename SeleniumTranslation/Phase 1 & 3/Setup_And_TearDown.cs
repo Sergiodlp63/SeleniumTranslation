@@ -30,10 +30,10 @@ namespace SeleniumTranslation.Phase1AND3
 
             // Initialize test result handler and test case objects
             var MyTestHandler = new TestResultsHandler();
-            var regressionTest = new TestBuilder_RegressionTC001(Mydriver, MyTestHandler);
+            var LocalTestInstance = new TestBuilder_RegressionTC001(Mydriver, MyTestHandler);
 
             // Run test actions
-            regressionTest.TB_SanityTest01_HomePage(MyTestHandler);
+            LocalTestInstance.TB_SanityTest01_HomePage(MyTestHandler);
 
             // Check test results and assert(s) if needed
             if (MyTestHandler.MyResultsSummary != null)
