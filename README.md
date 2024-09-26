@@ -11,6 +11,6 @@ For the purposes of this test suite, the 3 phases to automation are as follows.
 1) Phase 1: Navigate to URL 
 
 2) Phase 2: Click and send keys to the Nth degree.
-Note: Once an 'expected behavior' has occured by completing step 2 an ensure method needs to be implemented. 
+Note: Once an 'expected behavior' has occured by completing step 2 a 'ensure' type method needs to be implemented. 
 
 3) Phase 3: Implement: Assertion to complete the test. 
