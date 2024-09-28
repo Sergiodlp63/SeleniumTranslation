@@ -23,10 +23,11 @@ namespace SeleniumTranslation.Phase2
        
         public bool UseMainSearchBar(string MyKeysSent)
         {
-            string MainSearchBarLocation = "//*[@id=\"twotabsearchtextbox\"]";
+            
 
-            if (MyTest.ClickSearchBar(By.XPath(MainSearchBarLocation)) == false ||
-                MyTest.SendKeysToField(By.XPath(MainSearchBarLocation), MyKeysSent) == false )
+            if (MyTest.ClickSearchBar(By.Id("twotabsearchtextbox")) == false ||
+                MyTest.SendKeysToField(By.Id("twotabsearchtextbox"), MyKeysSent) == false ||
+                MyTest.SendKeysToField(By.Id("twotabsearchtextbox"), Keys.Enter) == false )
             {
                 ThisTest.RecordFailure("POM UseCase: Could not find MainSearchBar. ");
                 return false;
